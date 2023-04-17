@@ -96,7 +96,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: tickets-get.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs16.x
       FunctionName: TicketGetFunction
       Policies:
         - AWSLambdaDynamoDBExecutionRole #managed policy
@@ -121,7 +121,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: tickets-post.handler
-      Runtime: nodejs6.10
+      Runtime: 6.x
       FunctionName: TicketPostFunction
       Policies:
         - AWSLambdaDynamoDBExecutionRole #managed policy
@@ -145,7 +145,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: health-check.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs16.x
       FunctionName: SXRHealthCheckFunction
       Policies:
         - AWSLambdaDynamoDBExecutionRole #managed policy
